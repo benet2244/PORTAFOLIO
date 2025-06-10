@@ -126,7 +126,7 @@ h1, h2 {
     transition: all 0.3s ease;
     margin-top: 30px;
 }
-/* ... (tu CSS existente) ... */
+
 
 .btn-primary {
     display: inline-flex;
@@ -139,7 +139,7 @@ h1, h2 {
     background-color: var(--primary-color);
     color: white;
     transition: all 0.3s ease;
-    margin-top: 30px; /* Este margen puede necesitar ajuste si lo pones cerca de los social links */
+    margin-top: 30px; 
 }
 
 .btn-primary:hover {
@@ -148,7 +148,7 @@ h1, h2 {
     box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
 }
 
-/* Nuevo estilo para el botón de CV */
+
 .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -157,26 +157,26 @@ h1, h2 {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    background-color: transparent; /* Fondo transparente */
-    color: var(--accent-color); /* Color del texto */
-    border: 2px solid var(--accent-color); /* Borde con el color de acento */
+    background-color: transparent; 
+    color: var(--accent-color); 
+    border: 2px solid var(--accent-color); 
     transition: all 0.3s ease;
-    margin-top: 25px; /* Espacio superior */
+    margin-top: 25px; 
 }
 
 .btn-secondary:hover {
-    background-color: var(--accent-color); /* Fondo al pasar el ratón */
-    color: var(--dark-bg); /* Texto más oscuro al pasar el ratón */
+    background-color: var(--accent-color); 
+    color: var(--dark-bg); 
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3); /* Sombra con color de acento */
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3); 
 }
 
 .btn-primary i,
-.btn-secondary i { /* Ajuste para ambos botones si tienen ícono */
+.btn-secondary i { 
     margin-left: 10px;
 }
 
-/* ... (el resto de tu CSS) ... */
+
 .btn-primary:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
@@ -247,9 +247,9 @@ h1, h2 {
     transform: translateY(-5px);
 }
 
-/* Nuevos estilos para Experience y Education */
+/* Experience y Education */
 .experience-section, .education-section {
-    background-color: var(--dark-bg); /* O alterna con var(--light-bg) */
+    background-color: var(--dark-bg); 
     text-align: left;
 }
 
