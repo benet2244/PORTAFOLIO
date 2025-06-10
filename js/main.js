@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const typedTextElement = document.querySelector('.typed-text');
-    const roles = ["Analista de SOC", "Estudiante de Ingeniería en Sistemas", "Estudiante Fullstack Dev"];
+ 
+    const roles = ["ANALISTA DE SOC", "ESTUDIANTE DE INGENIERIA EN SISTEMAS", "ESTUDIANTE FULLSTACK DEV"]; [cite, 1, 44]
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

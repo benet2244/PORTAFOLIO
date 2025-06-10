@@ -47,6 +47,8 @@ nav {
 
 .logo {
     font-size: 1.8rem;
+    width: 30px;
+    height: 30px;
     font-weight: bold;
     color: var(--accent-color);
 }
@@ -179,6 +181,10 @@ h1, h2 {
     line-height: 1.8;
 }
 
+.social-links {
+    margin-top: 20px;
+}
+
 .social-links a {
     font-size: 2rem;
     color: var(--text-color-light);
@@ -189,6 +195,61 @@ h1, h2 {
 .social-links a:hover {
     color: var(--accent-color);
     transform: translateY(-5px);
+}
+
+/* Nuevos estilos para Experience y Education */
+.experience-section, .education-section {
+    background-color: var(--dark-bg); /* O alterna con var(--light-bg) */
+    text-align: left;
+}
+
+.experience-item, .education-item {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.experience-item h3, .education-item h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.experience-item h4, .education-item h4 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.experience-item .date, .education-item .date {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.experience-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-color-light);
+}
+
+.experience-item ul li {
+    margin-bottom: 8px;
+}
+
+.education-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-color-light);
+    margin-top: 15px;
+}
+
+.education-item ul li {
+    margin-bottom: 5px;
 }
 
 .skills-grid {
@@ -377,5 +438,9 @@ footer {
     .project-card {
         margin: 0 auto;
         max-width: 300px;
+    }
+
+    .experience-item, .education-item {
+        padding: 20px;
     }
 }
