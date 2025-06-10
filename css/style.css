@@ -126,7 +126,57 @@ h1, h2 {
     transition: all 0.3s ease;
     margin-top: 30px;
 }
+/* ... (tu CSS existente) ... */
 
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.3s ease;
+    margin-top: 30px; /* Este margen puede necesitar ajuste si lo pones cerca de los social links */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Nuevo estilo para el botón de CV */
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: transparent; /* Fondo transparente */
+    color: var(--accent-color); /* Color del texto */
+    border: 2px solid var(--accent-color); /* Borde con el color de acento */
+    transition: all 0.3s ease;
+    margin-top: 25px; /* Espacio superior */
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color); /* Fondo al pasar el ratón */
+    color: var(--dark-bg); /* Texto más oscuro al pasar el ratón */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3); /* Sombra con color de acento */
+}
+
+.btn-primary i,
+.btn-secondary i { /* Ajuste para ambos botones si tienen ícono */
+    margin-left: 10px;
+}
+
+/* ... (el resto de tu CSS) ... */
 .btn-primary:hover {
     background-color: #0056b3;
     transform: translateY(-3px);
