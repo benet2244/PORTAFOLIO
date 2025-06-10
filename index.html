@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benet Gómez - Portafolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Benet Gómez</div>
+            <ul class="nav-links">
+                <li><a href="#about">Acerca de Mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Hola, soy Benet Gómez</h1>
+                <p class="roles"><span class="typed-text"></span></p>
+                <a href="#projects" class="btn-primary">Ver Proyectos <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container" data-aos="fade-right">
+                <h2>Acerca de Mí</h2>
+                <div class="about-content">
+                    <img src="img/perfil1.jpg" alt="Benet Gómez Profile">
+                    <p>Analista de Ciberseguridad y estudiante de Ingeniería en Sistemas con formación en desarrollo Fullstack. Apasionado por la tecnología y la resolución de problemas.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/benet-alejandro-gómez-colindres-3703b6203" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/tu_usuario_github" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:benetcolindres@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container" data-aos="fade-up">
+                <h2>Mis Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">Ciberseguridad</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">Hacking Ético</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">Python</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">JavaScript</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">SQL Server</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">Redes</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">Linux</div>
+                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">HTML & CSS</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container" data-aos="fade-up">
+                <h2>Proyectos</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="zoom-in">
+                        <img src="img/tectica1.webp" alt="Proyecto Ciberseguridad">
+                        <h3>Plataforma de Simulación de Ataques</h3>
+                        <p>Herramienta para simular y analizar ciberataques.</p>
+                        <a href="#" target="_blank">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="img/inventario.webp" alt="Proyecto Fullstack">
+                        <h3>Sistema de Inventario Web</h3>
+                        <p>Aplicación Fullstack para gestión de inventario.</p>
+                        <a href="#" target="_blank">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container" data-aos="fade-up">
+                <h2>Contáctame</h2>
+                <form>
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Email" required>
+                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Benet Gómez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
