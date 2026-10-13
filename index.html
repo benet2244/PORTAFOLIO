@@ -3,180 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benet Gómez - Portafolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Portafolio de Benet Gómez: Analista de Ciberseguridad y programador que trabaja con inteligencia artificial. Pensum cerrado en Ingeniería en Sistemas y Maestría en Seguridad de la Información en curso.">
+    <meta name="theme-color" content="#05070f">
+    <title>Benet Gómez | Analista de Ciberseguridad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Fondo 3D (Three.js) -->
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header id="top-header">
         <nav>
-            <div class="logo">#</a></div>
+            <a href="#hero" class="logo" aria-label="Inicio"><span>&lt;</span>BG<span>/&gt;</span></a>
             <ul class="nav-links">
                 <li><a href="#about">Acerca de Mí</a></li>
                 <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#education">Educación & Certificaciones</a></li>
+                <li><a href="#education">Educación</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+            <button class="burger" aria-label="Abrir menú" aria-expanded="false">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </button>
         </nav>
     </header>
 
     <main>
+        <!-- HERO -->
         <section id="hero" class="hero-section">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>Hola, soy Benet Alejandro Gómez Colindres</h1>
-                <p class="roles"><span class="typed-text"></span></p>
-                <a href="#projects" class="btn-primary">Ver Proyectos <i class="fas fa-arrow-right"></i></a>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow reveal" style="--i:0"><span class="dot"></span> Disponible para nuevos retos</p>
+                    <h1 class="reveal" style="--i:1">
+                        <span class="hello">Hola, soy</span>
+                        <span class="name gradient-text">Benet Alejandro<br>Gómez Colindres</span>
+                    </h1>
+                    <p class="roles reveal" style="--i:2"><span class="prompt">&gt;</span> <span class="typed-text"></span><span class="caret"></span></p>
+                    <p class="hero-sub reveal" style="--i:3">Analizo amenazas, protejo infraestructuras y construyo software asistido por inteligencia artificial.</p>
+                    <div class="hero-actions reveal" style="--i:4">
+                        <a href="#projects" class="btn-primary magnetic">Ver Proyectos <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn-secondary magnetic">Contáctame <i class="fas fa-paper-plane"></i></a>
+                    </div>
+                </div>
             </div>
-        </section>
-
-<section id="about" class="about-section">
-    <div class="container" data-aos="fade-right">
-        <h2>Acerca de Mí</h2>
-        <div class="about-content">
-            <img src="img/perfil1.jpg" alt="Benet Gómez Profile">
-            <p>Analista de Ciberseguridad con experiencia en monitoreo de amenazas, hacking ético y herramientas avanzadas de ciberdefensa. Estudiante de Ingeniería en Sistemas con formación complementaria en redes, ciberseguridad y desarrollo Fullstack. Me considero una persona adaptable, orientada a resultados, con alta ética profesional, liderazgo y pasión por la tecnología.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/benetgomez4198" ><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/benet2244?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:benetcolindres@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+50241980445"><i class="fas fa-phone"></i></a>
-            </div>
-            <a href="cv/Currrículum.pdf" download="Curriculum_Benet_Gomez.pdf" class="btn-secondary">
-                Descargar CV <i class="fas fa-download"></i>
+            <a href="#about" class="scroll-hint" aria-label="Bajar">
+                <span class="mouse"><span class="wheel"></span></span>
             </a>
-            </div>
-    </div>
-</section>
+        </section>
 
+        <!-- ACERCA DE MÍ -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title reveal"><span class="idx">01</span> Acerca de Mí</h2>
+                <div class="about-card glass reveal" data-tilt>
+                    <div class="about-photo">
+                        <div class="photo-ring"></div>
+                        <img src="img/perfil1.jpg" alt="Benet Gómez - foto de perfil">
+                    </div>
+                    <div class="about-text">
+                        <p>Analista de Ciberseguridad con experiencia en monitoreo de amenazas, hacking ético y herramientas avanzadas de ciberdefensa. En paralelo me desarrollo como programador, usando la inteligencia artificial como herramienta central en mi forma de construir software. Cuento con conocimientos básicos en redes y en administración de sistemas y recursos, tengo el pensum cerrado de Ingeniería en Sistemas y actualmente llevo cuatro trimestres de la Maestría en Seguridad de la Información. Me considero una persona adaptable, orientada a resultados, con alta ética profesional, liderazgo y pasión por la tecnología.</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/benetgomez4198" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/benet2244?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:benetcolindres@gmail.com" aria-label="Correo"><i class="fas fa-envelope"></i></a>
+                            <a href="tel:+50241980445" aria-label="Teléfono"><i class="fas fa-phone"></i></a>
+                        </div>
+                        <a href="cv/Currrículum.pdf" download="Curriculum_Benet_Gomez.pdf" class="btn-secondary magnetic">
+                            Descargar CV <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA -->
         <section id="experience" class="experience-section">
-            <div class="container" data-aos="fade-left">
-                <h2>Experiencia Profesional</h2>
-                <div class="experience-item">
-                    <h3>Analista de Ciberseguridad</h3>
-                    <h4>Ministerio de la Defensa Nacional - Batallón de Ciberdefensa</h4>
-                    <p class="date">Guatemala | Sep 2022 - Actualidad</p>
-                    <ul>
-                        <li>Monitoreo de herramientas como Crowdstrike Falcon, Fortinet, Cisco Umbrella, SolarWinds.</li>
-                        <li>Evaluación y mitigación de vulnerabilidades.</li>
-                        <li>Análisis de amenazas con técnicas OSINT.</li>
-                        <li>Hacking ético.</li>
-                    </ul>
+            <div class="container">
+                <h2 class="section-title reveal"><span class="idx">02</span> Experiencia Profesional</h2>
+                <div class="timeline">
+                    <article class="timeline-item glass reveal" data-tilt>
+                        <span class="timeline-dot"></span>
+                        <p class="date"><i class="far fa-calendar"></i> Guatemala | Sep 2022 - Actualidad</p>
+                        <h3>Desarrollador de Software</h3>
+                        <h4>KILL</h4>
+                        <ul>
+                            <li>Funciones de desarrollo: construcción de software asistido por inteligencia artificial.</li>
+                            <li>Funciones de seguridad: análisis y monitoreo de amenazas.</li>
+                            <li>Combina ambos perfiles dentro de un mismo puesto.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item glass reveal" data-tilt>
+                        <span class="timeline-dot"></span>
+                        <p class="date"><i class="far fa-calendar"></i> Guatemala | Sep 2022 - Actualidad</p>
+                        <h3>Analista de Ciberseguridad</h3>
+                        <h4>Ministerio de la Defensa Nacional - Batallón de Ciberdefensa</h4>
+                        <ul>
+                            <li>Monitoreo y gestión con herramientas open source: Wireshark, Nmap, Zeek, Suricata, OpenVAS, Metasploit Framework, TheHive y Ghidra.</li>
+                            <li>Monitoreo con plataformas comerciales: CrowdStrike Falcon, Fortinet, Cisco Umbrella, SolarWinds, Microsoft Sentinel y Splunk Enterprise.</li>
+                            <li>Evaluación y mitigación de vulnerabilidades.</li>
+                            <li>Análisis de amenazas con técnicas OSINT.</li>
+                            <li>Hacking ético.</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- EDUCACIÓN -->
         <section id="education" class="education-section">
-            <div class="container" data-aos="fade-right">
-                <h2>Educación & Certificaciones</h2>
-                <div class="education-item">
-                    <h3>Ingeniería en Sistemas de Información y Ciencias de la Computación</h3>
-                    <h4>Universidad Mariano Gálvez, Villa Nueva</h4>
-                    <p class="date">2020 - Actualidad</p>
+            <div class="container">
+                <h2 class="section-title reveal"><span class="idx">03</span> Educación &amp; Certificaciones</h2>
+                <div class="timeline">
+                    <article class="timeline-item glass reveal" data-tilt>
+                        <span class="timeline-dot"></span>
+                        <p class="date"><i class="far fa-calendar"></i> En curso | 4 trimestres completados</p>
+                        <h3>Maestría en Seguridad de la Información</h3>
+                        <h4>Universidad Mariano Gálvez</h4>
+                    </article>
+                    <article class="timeline-item glass reveal" data-tilt>
+                        <span class="timeline-dot"></span>
+                        <p class="date"><i class="far fa-calendar"></i> 2020 - Actualidad | Pensum cerrado</p>
+                        <h3>Ingeniería en Sistemas de Información y Ciencias de la Computación</h3>
+                        <h4>Universidad Mariano Gálvez, Villa Nueva</h4>
+                    </article>
+                    <article class="timeline-item glass reveal" data-tilt>
+                        <span class="timeline-dot"></span>
+                        <p class="date"><i class="far fa-calendar"></i> Completado | 2025</p>
+                        <h3>Curso Fullstack Developer</h3>
+                        <h4>INTECAP Zona 5</h4>
+                    </article>
+                    <article class="timeline-item glass reveal" data-tilt>
+                        <span class="timeline-dot"></span>
+                        <p class="date"><i class="far fa-calendar"></i> 2016 - 2018</p>
+                        <h3>Bachiller en Computación</h3>
+                        <h4>Colegio Cristiano Beth Shalom, Amatitlán</h4>
+                    </article>
                 </div>
-                <div class="education-item">
-                    <h3>Curso Fullstack Developer</h3>
-                    <h4>INTECAP Zona 5</h4>
-                    <p class="date">En curso | Finaliza en septiembre de 2025</p>
-                </div>
-                <div class="education-item">
-                    <h3>Bachiller en Computación</h3>
-                    <h4>Colegio Cristiano Beth Shalom, Amatitlán</h4>
-                    <p class="date">2016 - 2018</p>
-                </div>
-                <div class="education-item">
-                    <h3>Certificaciones Clave</h3>
-                    <ul>
-                        <li>**Cybersecurity Essentials** (Cisco Networking Academy)</li>
-                        <li>**CyberOps Associate** (Cisco Networking Academy)</li>
-                        <li>**CCNAv7: Introducción a Redes** (Cisco Networking Academy)</li>
-                        <li>**Network Defense** (Cisco Academy)</li>
-                        <li>**Inducción ESET Digital Security** (ESET)</li>
-                        <li>**Southern Defender 2025 - Cyber Training** (US Southern Command)</li>
-                    </ul>
+
+                <h3 class="sub-title reveal">Certificaciones Clave</h3>
+                <div class="cert-grid">
+                    <div class="cert glass reveal" style="--i:0" data-tilt><i class="fas fa-shield-halved"></i><div><strong>Cybersecurity Essentials</strong><span>Cisco Networking Academy</span></div></div>
+                    <div class="cert glass reveal" style="--i:1" data-tilt><i class="fas fa-user-shield"></i><div><strong>CyberOps Associate</strong><span>Cisco Networking Academy</span></div></div>
+                    <div class="cert glass reveal" style="--i:2" data-tilt><i class="fas fa-network-wired"></i><div><strong>CCNAv7: Introducción a Redes</strong><span>Cisco Networking Academy</span></div></div>
+                    <div class="cert glass reveal" style="--i:3" data-tilt><i class="fas fa-lock"></i><div><strong>Network Defense</strong><span>Cisco Academy</span></div></div>
+                    <div class="cert glass reveal" style="--i:4" data-tilt><i class="fas fa-virus-slash"></i><div><strong>Inducción ESET Digital Security</strong><span>ESET</span></div></div>
+                    <div class="cert glass reveal" style="--i:5" data-tilt><i class="fas fa-medal"></i><div><strong>Southern Defender 2025 - Cyber Training</strong><span>US Southern Command</span></div></div>
                 </div>
             </div>
         </section>
 
+        <!-- HABILIDADES -->
         <section id="skills" class="skills-section">
-            <div class="container" data-aos="fade-up">
-                <h2>Mis Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">Ciberseguridad</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">Hacking Ético</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">OSINT</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">Python</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">JavaScript</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">HTML & CSS</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">SQL Server</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">MySQL</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="900">PostgreSQL</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1000">Java</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1100">PHP</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1200">.NET</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1300">Windows & Linux</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1400">Redes (TCP/IP)</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1500">Crowdstrike Falcon</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1600">Fortinet</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1700">Cisco Umbrella</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1800">Business Intelligence</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="1900">Microsoft Office</div>
-                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="2000">Soporte Técnico</div>
+            <div class="container">
+                <h2 class="section-title reveal"><span class="idx">04</span> Mis Habilidades</h2>
+                <div class="skills-wrap">
+                    <div class="skill-group glass reveal" style="--i:0" data-tilt>
+                        <h3><i class="fas fa-shield-halved"></i> Ciberseguridad</h3>
+                        <div class="chips">
+                            <span>Ciberseguridad</span><span>Hacking Ético</span><span>OSINT</span>
+                            <span>Crowdstrike Falcon</span><span>Fortinet</span><span>Cisco Umbrella</span>
+                        </div>
+                    </div>
+                    <div class="skill-group glass reveal" style="--i:1" data-tilt>
+                        <h3><i class="fas fa-code"></i> Desarrollo</h3>
+                        <div class="chips">
+                            <span>Python</span><span>JavaScript</span><span>HTML &amp; CSS</span>
+                            <span>Java</span><span>PHP</span><span>.NET</span>
+                            <span>Desarrollo Asistido por IA</span><span>Prompt Engineering</span>
+                        </div>
+                    </div>
+                    <div class="skill-group glass reveal" style="--i:2" data-tilt>
+                        <h3><i class="fas fa-database"></i> Datos</h3>
+                        <div class="chips">
+                            <span>SQL Server</span><span>MySQL</span><span>PostgreSQL</span><span>Business Intelligence</span>
+                        </div>
+                    </div>
+                    <div class="skill-group glass reveal" style="--i:3" data-tilt>
+                        <h3><i class="fas fa-server"></i> Sistemas y Redes</h3>
+                        <div class="chips">
+                            <span>Windows &amp; Linux</span><span>Redes (TCP/IP)</span><span>Microsoft Office</span><span>Soporte Técnico</span>
+                            <span>Administración de Sistemas</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROYECTOS -->
         <section id="projects" class="projects-section">
-            <div class="container" data-aos="fade-up">
-                <h2>Proyectos Destacados</h2>
+            <div class="container">
+                <h2 class="section-title reveal"><span class="idx">05</span> Proyectos Destacados</h2>
                 <div class="projects-grid">
-                    <div class="project-card" data-aos="zoom-in">
-                        <img src="img/pg1.png" alt="Proyecto Ciberseguridad">
-                        <h3>Plataforma de Ventas</h3>
-                        <p>Desarrollo de plataforma web para la venta de productos</p>
-                        <a href="https://benet2244.github.io/Tarea-AHDS/" target="_blank">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="img/pg2.png" alt="Proyecto Fullstack">
-                        <h3>Blog Personal</h3>
-                        <p> Primer proyecto: creacion de blog informativo</p>
-                        <a href="https://benet2244.github.io/AAT1-RA2-INTECAP/" target="_blank">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    </div>
+                    <article class="project-card glass reveal" style="--i:0" data-tilt>
+                        <div class="project-img"><img src="img/pg1.png" alt="Plataforma de Ventas"></div>
+                        <div class="project-body">
+                            <h3>Plataforma de Ventas</h3>
+                            <p>Desarrollo de plataforma web para la venta de productos.</p>
+                            <a href="https://benet2244.github.io/Tarea-AHDS/" target="_blank" rel="noopener">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card glass reveal" style="--i:1" data-tilt>
+                        <div class="project-img"><img src="img/pg2.png" alt="Blog Personal"></div>
+                        <div class="project-body">
+                            <h3>Blog Personal</h3>
+                            <p>Primer proyecto: creación de blog informativo.</p>
+                            <a href="https://benet2244.github.io/AAT1-RA2-INTECAP/" target="_blank" rel="noopener">Ver Proyecto <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
+        <!-- CONTACTO -->
         <section id="contact" class="contact-section">
-            <div class="container" data-aos="fade-up">
-                <h2>Contáctame</h2>
-                <form>
-                    <input type="text" placeholder="Tu Nombre" required>
-                    <input type="email" placeholder="Tu Email" required>
-                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+            <div class="container">
+                <h2 class="section-title reveal"><span class="idx">06</span> Contáctame</h2>
+                <form class="glass reveal">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                    <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary magnetic">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+                    <p class="form-status" role="status"></p>
                 </form>
-                <p style="margin-top: 20px; font-size: 1.1rem;">También puedes contactarme directamente en: <a href="mailto:benetcolindres@gmail.com" style="color: var(--accent-color);">benetcolindres@gmail.com</a></p>
-                    </ul>
-                </div>
+                <p class="contact-direct reveal">También puedes contactarme directamente en: <a href="mailto:benetcolindres@gmail.com">benetcolindres@gmail.com</a></p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Benet Gómez. Todos los derechos reservados.</p>
+            <p>&copy; <span id="year">2026</span> Benet Gómez. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" src="js/scene.js"></script>
 </body>
 </html>
